@@ -1,0 +1,26 @@
+{
+  "name": "MIKI — Voice-Controlled Bitcoin Wallet",
+  "short_name": "MIKI",
+  "description": "An accessible, voice-controlled Bitcoin Lightning wallet for blind and low-vision users.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
