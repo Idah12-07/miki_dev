@@ -173,16 +173,7 @@ function Shell() {
         {unlocked ? <Outlet /> : <LockScreen biometricEnrolled={biometricEnrolled} />}
       </main>
 
-      <footer className="px-4 py-3 text-center text-sm text-neutral-500">
-        <a
-          href="https://shakespeare.diy"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline decoration-neutral-700 underline-offset-2 hover:text-neutral-300 focus-visible:outline-2 focus-visible:outline-yellow-300"
-        >
-          Vibed with Shakespeare
-        </a>
-      </footer>
+    
     </div>
   );
 }

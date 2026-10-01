@@ -8,6 +8,7 @@ import SettingsPage from "./pages/SettingsPage";
 import { NIP19Page } from "./pages/NIP19Page";
 import NotFound from "./pages/NotFound";
 
+
 export function AppRouter() {
   return (
     <BrowserRouter>

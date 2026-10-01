@@ -22,6 +22,7 @@ import { PinScreen } from '@/components/miki/PinScreen';
 import { AlertIcon } from '@/components/miki/icons';
 import { useMiki } from '@/hooks/useMiki';
 import { useVoiceWallet } from '@/hooks/useVoiceWallet';
+import { satsToBTC } from '@/lib/currency'; 
 
 export default function Index() {
   const voice = useVoiceWallet();
@@ -43,7 +44,9 @@ export default function Index() {
         <p aria-live="polite" aria-atomic="true" className="text-2xl font-bold text-white">
           Balance:{' '}
           <span className="text-yellow-400">
-            {balance === null ? '…' : `${balance.toLocaleString()} sats`}
+            {balance === null
+              ? '…'
+              : `${balance.toLocaleString()} sats (${satsToBTC(balance)} BTC)`}
           </span>
         </p>
 
@@ -68,7 +71,7 @@ export default function Index() {
         {!voice.speechSupported && (
           <p
             role="alert"
-            className="flex items-start gap-3 rounded-2xl border-2 border-red-400 p-4 text-lg font-semibold text-red-300"
+            className="flex items-start gap-3 rounded-2xl border-2 border-destructive p-4 text-lg font-semibold text-destructive"
           >
             <AlertIcon size={28} className="mt-0.5 shrink-0" />
             Speech recognition is not supported in this browser. For the full
