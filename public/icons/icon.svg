@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- MIKI app icon: a bold yellow microphone on black.
+       Full-bleed background so it also works as a maskable icon;
+       the glyph stays inside the central safe zone. -->
+  <rect width="512" height="512" fill="#000000"/>
+  <g fill="#facc15">
+    <!-- mic capsule -->
+    <rect x="206" y="100" width="100" height="184" rx="50"/>
+    <!-- stem -->
+    <rect x="244" y="372" width="24" height="48" rx="12"/>
+    <!-- base -->
+    <rect x="188" y="412" width="136" height="30" rx="15"/>
+  </g>
+  <!-- stand arc -->
+  <path d="M 150 278 A 106 106 0 0 0 362 278" fill="none" stroke="#facc15" stroke-width="30" stroke-linecap="round"/>
+</svg>

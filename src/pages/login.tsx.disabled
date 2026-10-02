@@ -1,0 +1,36 @@
+import { useState } from "react";
+import { feedback } from "../lib/feedback";
+
+export default function Login({ onSuccess }: { onSuccess: () => void }) {
+  const [pin, setPin] = useState("");
+
+  async function handleSignIn() {
+    // TODO: replace with real check against wallet.ts / backend
+    if (pin.length >= 4) {
+      await feedback("Signed in", "success"); // speaks + vibrates + shows status
+      onSuccess();
+    } else {
+      await feedback("Incorrect PIN, please try again", "error");
+    }
+  }
+
+  return (
+    <main className="min-h-screen flex flex-col justify-center p-6 gap-4">
+      <h1 className="text-3xl font-bold">Welcome back</h1>
+      <p>Sign in to hear when a payment is confirmed.</p>
+      <label htmlFor="pin" className="text-xl">PIN</label>
+      <input
+        id="pin"
+        type="password"
+        inputMode="numeric"
+        value={pin}
+        onChange={(e) => setPin(e.target.value)}
+        aria-label="Enter your PIN. Type it, do not say it aloud."
+        className="text-2xl p-4 border-2"
+      />
+      <button onClick={handleSignIn} className="bg-black text-white text-2xl p-4">
+        Sign in
+      </button>
+    </main>
+  );
+}
