@@ -12,6 +12,7 @@
  */
 
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useSeoMeta } from '@unhead/react';
 
 import { PinScreen } from '@/components/miki/PinScreen';
@@ -372,6 +373,23 @@ export default function SettingsPage() {
             );
           })}
         </div>
+      </section>
+
+      {/* ── Account restoration ─────────────────────────────────────── */}
+      <section aria-labelledby="recovery-heading" className="flex flex-col gap-3">
+        <h2 id="recovery-heading" className="text-2xl font-bold text-white">
+          Account restoration
+        </h2>
+        <p className="text-lg text-neutral-300">
+          Set up or test getting your wallet back with help from trusted
+          contacts — no company or server can approve this, only you and them.
+        </p>
+        <Link
+          to="/recovery"
+          className="flex min-h-14 items-center justify-center rounded-2xl bg-yellow-400 px-6 text-xl font-bold text-black hover:bg-yellow-300 focus-visible:outline-4 focus-visible:outline-white"
+        >
+          Account restoration
+        </Link>
       </section>
 
       {/* ── Demo tools ──────────────────────────────────────────────── */}
